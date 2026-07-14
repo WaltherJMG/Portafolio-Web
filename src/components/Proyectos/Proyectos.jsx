@@ -3,6 +3,7 @@ import Aromao from '../../assets/aromao.webp';
 import TicTacTo from '../../assets/tic-tac-to.webp';
 import Landing from '../../assets/LANDING.webp';
 import Sistema from '../../assets/SISTEMA.webp';
+import JarvisPreview from '../../assets/jarvis.webp';
 import GitHub from '../../assets/github.png';
 import './Proyectos.css';
 
@@ -13,6 +14,7 @@ const projects = [
         type: 'Landing comercial',
         description: 'Sitio promocional para una marca de cafe con enfoque visual, secciones comerciales y presentacion de producto.',
         stack: ['HTML', 'CSS'],
+        codeUrl: 'https://github.com/MegaDSeo',
     },
     {
         title: 'Tic Tac Toe',
@@ -20,6 +22,7 @@ const projects = [
         type: 'Juego interactivo',
         description: 'Juego clasico con manejo de turnos, validacion de ganador y estados de partida en el navegador.',
         stack: ['HTML', 'CSS', 'JavaScript'],
+        codeUrl: 'https://github.com/MegaDSeo',
     },
     {
         title: 'Landing Page',
@@ -27,6 +30,7 @@ const projects = [
         type: 'Reto frontend',
         description: 'Pagina de aterrizaje basada en un reto de Frontend Mentor, optimizada para lectura y adaptacion responsive.',
         stack: ['HTML', 'CSS', 'JavaScript'],
+        codeUrl: 'https://github.com/MegaDSeo',
     },
     {
         title: 'Gestion de Inventario',
@@ -34,6 +38,15 @@ const projects = [
         type: 'Sistema Web',
         description: 'Sistema de gestion de inventario para una empresa automotriz, con funcionalidades de registro, actualizacion y eliminacion de productos.',
         stack: ['HTML', 'CSS', 'JavaScript'],
+        codeUrl: 'https://github.com/MegaDSeo',
+    },
+    {
+        title: 'Jarvis',
+        image: JarvisPreview,
+        type: 'Asistente virtual',
+        description: 'Asistente web en desarrollo para ejecutar comandos, automatizar tareas y responder solicitudes desde una interfaz simple.',
+        stack: ['React', 'Node.js', 'JavaScript'],
+        codeUrl: 'https://github.com/WaltherJMG',
     },
 ];
 
@@ -67,7 +80,7 @@ const Proyectos = () => {
                                 {project.stack.map((tech) => <span key={tech}>{tech}</span>)}
                             </div>
                             <div className="card-social">
-                                <a href="https://github.com/MegaDSeo" target="_blank" rel="noreferrer">
+                                <a href={project.codeUrl} target="_blank" rel="noreferrer">
                                     <img src={GitHub} alt="" /> Codigo
                                 </a>
                                 <a href="#contacto">Consultar</a>
