@@ -1,0 +1,130 @@
+#contacto {
+    padding: 5.5rem 0;
+}
+
+.contact-contain {
+    width: min(100% - 2rem, 780px);
+    margin: auto;
+    text-align: center;
+}
+
+.form-animation {
+    margin-top: 2.5rem;
+    text-align: left;
+}
+
+.form-animation form {
+    display: grid;
+    gap: 1.25rem;
+    padding: clamp(1.25rem, 4vw, 2rem);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    background:
+        linear-gradient(135deg, rgba(0, 118, 244, 0.09), rgba(34, 197, 94, 0.05)),
+        #1c1c1c;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
+}
+
+.form-contain {
+    display: grid;
+    gap: 1rem;
+}
+
+.form-names {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.form-animation label {
+    display: grid;
+    gap: 0.5rem;
+    color: #d8dde7;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+.form-animation input,
+.form-animation textarea {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    outline: none;
+    background: #111111;
+    color: #ffffff;
+    padding: 0.85rem 0.95rem;
+    transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.form-animation textarea {
+    resize: vertical;
+    min-height: 160px;
+}
+
+.form-animation input:focus,
+.form-animation textarea:focus {
+    border-color: #0076f4;
+    box-shadow: 0 0 0 3px rgba(0, 118, 244, 0.18);
+}
+
+.btn {
+    width: fit-content;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.1rem;
+    border: 1px solid #0076f4;
+    border-radius: 8px;
+    background: #0076f4;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 800;
+    transition: transform 180ms ease, background-color 180ms ease;
+    will-change: transform;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background: #1385ff;
+}
+
+.btn:disabled {
+    cursor: wait;
+    opacity: 0.72;
+    transform: none;
+}
+
+.btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.form-status {
+    color: #aeb4c0;
+    line-height: 1.6;
+}
+
+.form-status.success {
+    color: #6ee7a8;
+}
+
+.form-status.error {
+    color: #ff8a8a;
+}
+
+@media (max-width: 575px) {
+    #contacto {
+        padding: 4rem 0;
+    }
+
+    .form-names {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
